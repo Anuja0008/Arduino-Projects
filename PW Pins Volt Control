@@ -1,0 +1,21 @@
+ int led=5;
+ int led1=6;
+
+void setup() {
+
+  pinMode(led,OUTPUT);
+    pinMode(led1,OUTPUT);
+  
+}
+
+void loop() 
+{
+ analogWrite(led,5);
+  analogWrite(led1,20);
+} 
+ 
+  
+ 
+ 
+
+      
