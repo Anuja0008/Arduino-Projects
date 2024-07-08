@@ -1,0 +1,24 @@
+int delay_time=5000;
+bool state=false;
+
+
+
+void setup() {
+  
+  Serial.begin(9600);
+  
+
+}
+
+void loop() {
+  delay(delay_time);
+  state=true;
+ if(state==true)
+ {
+  delay_time=2000;
+ }
+ Serial.println(state);
+  Serial.println(delay_time);
+ 
+
+}
