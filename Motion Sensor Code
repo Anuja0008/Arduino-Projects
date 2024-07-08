@@ -1,0 +1,35 @@
+int LED = D4;       
+     
+int SENSOR_OUTPUT_PIN = D7;
+
+void setup() {
+
+  pinMode(SENSOR_OUTPUT_PIN, INPUT);  //D1
+
+  pinMode(LED, OUTPUT);    //D4       
+
+  Serial.begin(9600);
+
+}
+
+void loop() {
+
+  int sensorvalue = digitalRead(SENSOR_OUTPUT_PIN);
+
+  Serial.println(sensorvalue);
+  
+  if (sensorvalue== HIGH) {
+ 
+   digitalWrite(LED, HIGH);
+   Serial.println("Motion Detected");
+
+    delay(1000);
+  }
+
+  else {
+
+    digitalWrite(LED, LOW);
+     Serial.println("Motion Not Detected");
+   
+  }
+}
